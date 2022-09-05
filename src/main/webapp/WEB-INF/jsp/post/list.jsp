@@ -19,7 +19,57 @@
 	
 	<div class="container">
 		<c:import url="/WEB-INF/jsp/include/header.jsp" />
-		<section>
+		<section class="d-flex justify-content-center">
+		
+			
+			<div class="new-post-area mt-2">
+				<form>
+					<div class="form-group">
+						<textarea class="form-control"></textarea>
+						<button style="float:right" class="btn btn-info btn-sm mt-1">업로드</button>
+					</div>
+				</form>
+				
+				<div class="bar mt-5">
+					<label class="ml-1 ">${userId }</label>
+				</div>
+				
+				<div class="mt-1">
+					<img class="img-fluid mt-1" src="https://cdn.pixabay.com/photo/2016/12/30/17/27/cat-1941089_960_720.jpg">
+					<a href="#"><img class="full-heart" width=18 src="https://www.iconninja.com/files/527/809/128/heart-icon.png"></a>
+					<a href="#"><img class="empty-heart" width=18 src="https://www.iconninja.com/files/214/518/441/heart-icon.png"></a>
+					<label class="text-sm mt-1" >좋아요 11개</label>
+				</div>
+				
+				<div>
+					<label class="font-weight-bold">hagulu</label> <label>고양이 귀엽죠?</label>
+				</div>
+				
+				<div class="bar">
+					<label class="ml-1 text-small comment-bar">댓글</label>		
+				</div>
+				
+				<div>
+					<div class="comment">
+						<label class="font-weight-bold">냥이집사</label> <label class="ml-1">귀엽네요</label> <br>
+						<label class="font-weight-bold">강쥐집사</label> <label class="ml-1">오 ^^~</label>
+					</div>
+				</div>
+				
+				<div class="d-flex">
+					<input type="text" class="form-control" placeholder="내용을 입력해주세요">
+					<button class="ml-2 btn btn-primary btn-sm">게시</button>
+				</div>
+				
+			</div>
+			
+			
+			
+		
+			
+	
+			
+			
 		
 		</section>
 		
