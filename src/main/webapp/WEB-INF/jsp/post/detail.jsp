@@ -30,9 +30,13 @@
 				</div>
 				<textarea id="contentInput" class="form-control mt-2" rows="7">${post.content }</textarea>
 				
+				<div class ="mt-3">
+					<img class="w-100" src="${post.imagePath }">
+				</div>
+				
 				<div class="d-flex justify-content-between mt-3 mb-3">
 					<div>
-						<a href="/post/timeline/view" class="btn btn-primary " >목록으로</a>
+						<a href="/post/list/view" class="btn btn-primary " >목록으로</a>
 						<a href="#" class="btn btn-danger" id="deleteBtn">삭제</a>
 					</div>
 					<a href="#" class="btn btn-primary" id="modifyBtn">수정</a>

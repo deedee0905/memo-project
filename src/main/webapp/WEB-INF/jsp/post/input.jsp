@@ -28,10 +28,9 @@
 					<label class="col-2">제목 : </label> <input type="text" class="form-control col-10" id="titleInput">
 				</div>
 				<textarea id="contentInput" class="form-control mt-2" rows="7"></textarea>
-				
-				<input type="file" class="mt-1">
+				<input type="file" class="mt-1" id="fileInput">
 				<div class="d-flex justify-content-between mt-3 mb-3">
-					<a href="/post/timeline/view" class="btn btn-primary " >목록으로</a>
+					<a href="/post/list/view" class="btn btn-primary " >목록으로</a>
 					<a href="#" class="btn btn-primary" id="saveBtn">저장</a>
 				</div>
 				
@@ -62,11 +61,20 @@
 					return;
 				}
 				
+				var formData = new FormData();
+				formData.append("title", title);
+				formData.append("content", content);
+				formData.append("file", $("#fileInput")[0].files[0]);
+				
+				
 				
 				$.ajax({
 					type:"post"
 					, url:"/post/create"
-					, data:{"title":title, "content":content}
+					, data:formData
+					, enctype:"multipart/form-data" // 파일 업로드시 필수 옵션!!
+					,processData:false // 파일 업로드시 필수 옵션!!
+					,contentType:false // 파일 업로드시 필수 옵션!!
 					, success:function(data){
 						
 						if(data.result == "success"){

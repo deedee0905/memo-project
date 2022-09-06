@@ -24,7 +24,7 @@
 		<c:if test="${not empty userId }">
 		<section class="d-flex justify-content-center">
 			<div class="col-9">
-				<h2 class="text-center">메모리스트</h2>
+				<h2 class="text-center mt-3">메모리스트</h2>
 				
 				<table class="table">
 					<thead>
@@ -39,7 +39,7 @@
 					<c:forEach var="post" items="${postList }" >
 						<tr>
 							<td>${post.id }</td>
-							<td>${post.subject }</td>
+							<td><a href="/post/detail/view?id=${post.id }">${post.subject }</a></td>
 							<td><fmt:formatDate value="${post.createdAt }" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 						</tr>
 						</c:forEach>
