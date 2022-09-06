@@ -29,13 +29,14 @@
 		<section class="contents d-flex justify-content-center mt-4">
 			<div class="join-box my-5">
 				<h2 class="text-center">로그인</h2>
-				
+				<form id="loginForm">
 					<input type="text" placeholder="아이디" class="form-control mt-3" id="loginIdInput">
 					<input type="password" placeholder="비밀번호" class="form-control mt-2" id="passwordInput">
-					<button type="button" class="btn btn-primary btn-block mt-2" id="loginBtn">로그인</button>
+					<button type="submit" class="btn btn-primary btn-block mt-2" id="loginBtn">로그인</button>
+				</form>
 				
 				<div class="text-center mt-2">
-				<a href="http://localhost:8080/user/signup/view">회원가입</a>
+					<a href="http://localhost:8080/user/signup/view">회원가입</a>
 				</div>
 			</div>
 		</section>
@@ -49,9 +50,9 @@
 		$(document).ready(function() {
 			
 			// $("#loginBtn").on("click", function() {
-			$("#loginBtn").on("click", function() {
+			$("#loginForm").on("submit", function(e) {
 				
-					
+				e.preventDefault();
 	
 				let loginId = $("#loginIdInput").val();
 				let password = $("#passwordInput").val();

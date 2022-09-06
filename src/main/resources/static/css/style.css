@@ -5,8 +5,10 @@ header {
 	background-color:#dddddd;
 }
 
-section{
-	height:600px;
+
+
+.content-box {
+	width: 600px;
 }
 
 .bar {

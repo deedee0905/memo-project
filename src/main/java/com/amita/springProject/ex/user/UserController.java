@@ -27,6 +27,8 @@ public class UserController {
 		
 		HttpSession sessoin =  request.getSession();
 		
+		//로그인 정보 제거
+		// 세션에 로그인 사용자 정보 제거
 		sessoin.removeAttribute("userId");
 		sessoin.removeAttribute("userName");
 		
